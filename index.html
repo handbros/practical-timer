@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Practical English Timer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        html,
+        body {
+          width: 100%;
+          height: 100%;
+        }
+        .container {
+          width: 100%;
+          height: 100%;
+          background: pink;
+        }
+    </style>
+  </head>
+  <body>
+    <h1 id="question-1"></h1>
+    <h1 id="question-2"></h1>
+    <h1 id="question-3"></h1>
+    <h1 id="question-4"></h1>
+    <h1 id="question-5"></h1>
+    <script>
+        var q1 = ["Tell me about your company.", "What does your company do?", "What kind of company is [company name]?", "Please explain what your company does.", "Tell me about your products and services.", "What does your company specialize in?", "What features do your products / services have?", "Are your products / services [good value / popular / high-tech / high-quality / reliable / user friendly]?"];
+        var q2 = ["Tell me about yourself.", "Do you like working for [company name]?", "What are you working on these days?", "When did you start working at [company name]?", "How long have you worked at [company name]?", "How did your career begin?", "What did you do before [company name]?", "How did you get your job?", "Tell me about your work history. (experience)", "What skills and qualifications do you have?", "What made you a good candidate for your job?"];
+        var q3 = ["What is your company working on now?", "Is your company doing well these days?", "How is business these days?", "How is your company’s business performance?", "How do you perform better than your competitors?", "Where does your company operate?", "What is your company's reputation?", "Is your company known for original ideas?"];
+        var q4 = ["Tell me about your colleagues.", "Where is your company based?", "Do you like your company’s location?", "Is your company socially responsible?", "How is your company’s safety record?", "How is your company’s environmental performance?", "How does your company recruit new employees?"];
+        var q5 = ["Tell me about your company’s history.", "What has your company done recently?", "How were your company’s sales last year?", "How was business last month?", "Has your revenue increased or decreased lately?", "How has your company managed costs lately?"];
+
+        function getRandom(min, max)
+        {
+	        var res = Math.floor(Math.random() * (max - min + 1) + min);
+            return res;
+        }
+
+        document.getElementById("question-1").innerHTML = "1. " + q1[getRandom(0, q1.length-1)]
+        document.getElementById("question-2").innerHTML = "2. " + q2[getRandom(0, q2.length-1)]
+        document.getElementById("question-3").innerHTML = "3. " + q3[getRandom(0, q3.length-1)]
+        document.getElementById("question-4").innerHTML = "4. " + q4[getRandom(0, q4.length-1)]
+        document.getElementById("question-5").innerHTML = "5. " + q5[getRandom(0, q5.length-1)]
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>
