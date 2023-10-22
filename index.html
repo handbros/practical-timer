@@ -19,9 +19,11 @@
     </style>
   </head>
   <body>
+    <h1 id="timer" style="margin:20px;">0분 0초</h1>
+
     <div class="card container">
         <div class="card-header">
-          Question 1
+          질문 1
         </div>
         <div class="card-body">
           <blockquote class="blockquote mb-0">
@@ -32,7 +34,7 @@
 
     <div class="card container">
         <div class="card-header">
-          Question 1
+          질문 2
         </div>
         <div class="card-body">
           <blockquote class="blockquote mb-0">
@@ -43,7 +45,7 @@
 
     <div class="card container">
         <div class="card-header">
-          Question 3
+          질문 3
         </div>
         <div class="card-body">
           <blockquote class="blockquote mb-0">
@@ -54,7 +56,7 @@
 
     <div class="card container">
         <div class="card-header">
-          Question 4
+          질문 4
         </div>
         <div class="card-body">
           <blockquote class="blockquote mb-0">
@@ -65,7 +67,7 @@
 
     <div class="card container">
         <div class="card-header">
-          Question 5
+          질문 5
         </div>
         <div class="card-body">
           <blockquote class="blockquote mb-0">
@@ -92,6 +94,17 @@
         document.getElementById("question-3").innerHTML = "3. " + q3[getRandom(0, q3.length-1)]
         document.getElementById("question-4").innerHTML = "4. " + q4[getRandom(0, q4.length-1)]
         document.getElementById("question-5").innerHTML = "5. " + q5[getRandom(0, q5.length-1)]
+
+        var elapsed_seconds = 0;
+
+        var x = setInterval(function() {
+            elapsed_seconds++;
+
+            var min = parseInt(elapsed_seconds/60);
+            var sec = elapsed_seconds % 60;
+
+            document.getElementById("timer").innerHTML = min + "분 " + sec + "초"
+        }, 1000);
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   </body>
